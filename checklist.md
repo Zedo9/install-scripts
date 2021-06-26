@@ -50,6 +50,7 @@ locale-gen
 - Create Root password with `passwd`
 
 ## Bootloader
+- Edit /etc/default/grub and remove quiet flag.
 If Dual booting with windows, append this line to `/etc/default/grub` : 
 **GRUB_DISABLE_OS_PROBER=false**
 - Install Grub (For EFI) :
@@ -82,3 +83,18 @@ EDITOR=nvim visudo
 ```
 sudo mkinitcpio -p linux
 ```
+
+# Fix tapping (laptops)
+- Create a new file under `/etc/X11/xorg.conf.d/30-touchpad.conf`
+- Paste the following inside it :
+```
+Section "InputClass"
+        Identifier "touchpad"
+        Driver "libinput"
+        MatchIsTouchpad "on"
+        Option "ClickMethod" "clickfinger"
+        Option "Tapping" "on"
+        Option "TappingButtonMap" "lrm"
+EndSection
+```
+- More information [here](https://wiki.archlinux.org/title/Libinput) and [here](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS).
