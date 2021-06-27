@@ -1,7 +1,6 @@
 #!/bin/sh
 # Inspired by https://gitlab.com/eflinux/arch-basic
 
-
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
 echo "KEYMAP=fr" >> /etc/vconsole.conf
@@ -24,9 +23,6 @@ systemctl enable sshd
 systemctl enable avahi-daemon
 systemctl enable tlp 
 # systemctl enable fstrim.timer
-# systemctl enable libvirtd
-# systemctl enable firewalld
-# systemctl enable acpid
 
 echo "---Installing Paru---"
 git clone https://aur.arch.org/paru

@@ -3,7 +3,10 @@
 - [ ] base
 - [ ] post-reboot
 - [ ] dev-tools
-- [ ] printers
 - [ ] theme
 - [ ] secondary
-- [ ] productivity
+- [ ] Download wallpapers
+- [ ] Setup Github ssh keys
+- Optionl :
+  - [ ] printers
+  - [ ] productivity
