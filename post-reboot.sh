@@ -7,9 +7,9 @@ sudo pacman -S x86-video-intel
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 sudo pacman -S firefox alacritty nautilus picom ranger feh light
-sudo pacman -S lxappearance lxsession
+sudo pacman -S lxappearance
 
-sudo pacman -S awesome rofi
+sudo pacman -S awesome rofi flameshot
 
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
