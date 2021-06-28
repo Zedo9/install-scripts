@@ -14,7 +14,7 @@ echo "127.0.1.1 arch-asus.localdomain arch-asus" >> /etc/hosts
 
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion tlp acpi acpi_call openssh
+pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion tlp acpi acpi_call openssh man
 
 Echo "---Services---"
 systemctl enable NetworkManager

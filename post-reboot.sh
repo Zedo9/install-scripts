@@ -5,11 +5,19 @@ sudo hwclock --systohc
 
 sudo pacman -S x86-video-intel
 sudo pacman -S nvidia nvidia-utils nvidia-settings
-sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 sudo pacman -S firefox alacritty nautilus picom ranger feh light
-sudo pacman -S lxappearance
+sudo pacman -S lxappearance evince
 
-sudo pacman -S awesome rofi flameshot
+# Xorg
+sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
+# sudo pacman -S awesome rofi flameshot
+
+# Wayland
+sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr wl-clipboard swappy grim slurp libnotify dunst
+paru -S wdisplays sway-desktop-launcher
+
+# Media
+sudo pacman -S mpv youtube-dl vlc
 
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
@@ -24,7 +32,10 @@ sudo pacman -S dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 f
 sudo pacman -S net-tools bind-tools traceroute rsync wget
 
 # Audio tools
-sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects
+sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects playerctl
+
+# Pipewire
+# sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
 
 # Fonts 
 paru -S ttf-ms-fonts

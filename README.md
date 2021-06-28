@@ -5,6 +5,18 @@ This repo is a guide I created for installing Arch Linux (Or any other distro if
 # Getting started
 
 - loadkeys fr
+- Check if you have Internet by pinging a website
+- If installing with wifi use iwctl to connect to your wifi network
+
+```
+iwctl
+device list
+station <device_name> scan
+station <device_name> get-networks
+station <device_name> connect <SSID>
+exit
+```
+
 - pacman -Syyy
 - timedatectl set-ntp true
 

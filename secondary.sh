@@ -1,3 +1,3 @@
 #!/bin/sh
 
-paru -S brave-bin
+paru -S brave-bin obs-studio

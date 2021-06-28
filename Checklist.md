@@ -7,6 +7,7 @@
 - [ ] secondary
 - [ ] Download wallpapers
 - [ ] Setup Github ssh keys
-- Optionl :
+- [ ] Download VS Code config with Settings Sync
+- Optional :
   - [ ] printers
   - [ ] productivity
