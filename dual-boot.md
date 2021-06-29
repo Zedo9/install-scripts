@@ -1,6 +1,5 @@
 # Before doing anything
 
-- Make sure secure-boot is disabled
 - Install Windows 10
 - Disable Fast Startup in Windows and reboot
 - Shrink space from the main partition (50GB to 200GB depending on your use case for linux).

@@ -2,6 +2,8 @@
 
 This repo is a guide I created for installing Arch Linux (Or any other distro if you want) from scratch. It inculdes several scripts for installing the main tools I use on my different machines split into different categories and some tips and tricks for fixing common problems (Dual boot - Trackpads...).
 
+- All information is extrated and heavily inspired by the Arch Wiki.
+
 # Getting started
 
 - loadkeys fr
@@ -72,7 +74,7 @@ hwclock --systohc
 ```
 
 - Generate locales :
-  Uncommend `EN_US-utf-8` in **/etc/locale.gen** then run
+  Uncomment `EN_US-utf-8` in **/etc/locale.gen** then run
 
 ```
 locale-gen
@@ -84,7 +86,7 @@ locale-gen
 ## Bootloader
 
 - Edit /etc/default/grub and remove quiet flag.
-  If Dual booting with windows, append this line to `/etc/default/grub` :
+  If Dual booting, append this line to `/etc/default/grub` :
   **GRUB_DISABLE_OS_PROBER=false**
 - Install Grub (For EFI) :
 

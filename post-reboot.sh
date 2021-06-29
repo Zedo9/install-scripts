@@ -10,11 +10,15 @@ sudo pacman -S lxappearance evince
 
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
-# sudo pacman -S awesome rofi flameshot
+sudo pacman -S awesome rofi flameshot
+
+# Display manager
+paru -S ly 
+sudo systemctl enable ly.service
 
 # Wayland
-sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr wl-clipboard swappy grim slurp libnotify dunst
-paru -S wdisplays sway-desktop-launcher
+#sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr wl-clipboard swappy grim slurp libnotify dunst
+#paru -S wdisplays sway-desktop-launcher
 
 # Media
 sudo pacman -S mpv youtube-dl vlc
