@@ -14,14 +14,17 @@ echo "127.0.1.1 arch-asus.localdomain arch-asus" >> /etc/hosts
 
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion tlp acpi acpi_call openssh man
+pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi acpi_call openssh man
+
+#Laptop 
+pacman -S tlp light
+systemctl enable tlp 
 
 Echo "---Services---"
 systemctl enable NetworkManager
 # systemctl enable bluetooth
 systemctl enable sshd
 systemctl enable avahi-daemon
-systemctl enable tlp 
 # systemctl enable fstrim.timer
 
 echo "---Installing Paru---"

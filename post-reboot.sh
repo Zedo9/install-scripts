@@ -5,7 +5,7 @@ sudo hwclock --systohc
 
 sudo pacman -S x86-video-intel
 sudo pacman -S nvidia nvidia-utils nvidia-settings
-sudo pacman -S firefox alacritty nautilus picom ranger feh light
+sudo pacman -S firefox alacritty nautilus picom ranger ueberzug feh
 sudo pacman -S lxappearance evince
 
 # Xorg

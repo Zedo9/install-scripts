@@ -126,7 +126,9 @@ EDITOR=nvim visudo
 sudo mkinitcpio -p linux
 ```
 
-# Fix tapping (laptops)
+# Fixes
+
+## Tapping (laptops)
 
 - Create a new file under `/etc/X11/xorg.conf.d/30-touchpad.conf`
 - Paste the following inside it :
@@ -143,3 +145,10 @@ EndSection
 ```
 
 - More information [here](https://wiki.archlinux.org/title/Libinput) and [here](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS).
+
+## Java applications
+
+**[Source](https://wiki.archlinux.org/title/Dwm#Fixing_misbehaving_Java_applications)**
+
+- Append `export _JAVA_AWT_WM_NONREPARENTING=1` to `/etc/profile.d/jre.sh`
+- Append `export AWT_TOOLKIT=MToolkit` and `export _JAVA_AWT_WM_NONREPARENTING=1` to window manager start script (.xinitrc...)
