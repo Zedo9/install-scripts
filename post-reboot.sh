@@ -3,10 +3,12 @@
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-sudo pacman -S x86-video-intel
+# sudo pacman -S x86-video-intel
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 sudo pacman -S firefox alacritty nautilus picom ranger ueberzug feh
 sudo pacman -S lxappearance evince
+
+paru -S brave-bin
 
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
@@ -21,8 +23,8 @@ sudo pacman -S dunst
 sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 
 # Display manager
-# paru -S ly 
-# sudo systemctl enable ly.service
+paru -S ly 
+sudo systemctl enable ly.service
 
 # Wayland
 #sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr wl-clipboard swappy grim slurp libnotify dunst
@@ -43,7 +45,7 @@ sudo pacman -S dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 f
 # Networking tools
 sudo pacman -S net-tools bind-tools traceroute rsync wget
 
-# Audio tools
+# Pulse audio
 sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects playerctl
 
 # Pipewire

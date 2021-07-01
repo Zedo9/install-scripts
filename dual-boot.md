@@ -1,7 +1,7 @@
 # Before doing anything
 
-- Install Windows 10
-- Disable Fast Startup in Windows and reboot
+- Install Windows 10.
+- Disable Fast Startup in Windows and reboot.
 - Shrink space from the main partition (50GB to 200GB depending on your use case for linux).
 - Install your linux distribution on the free space.
 - **It is recommonded to create a seperate EFI partition (For UEFI users) and installing grub there instead of the Windows EFI partition. This will avoid any problems when installing Windows updates.**
@@ -10,7 +10,7 @@
 
 - To access Linux files from Windows, you can use this [tool](https://www.diskinternals.com/linux-reader/).
 - To access Windows files from Linux, make sure you have `ntfs-3g` installed and that your Windows partition is mounted somewhere.
-- To improve portability and ease of access, Keep all your main files on the Windows partition.
+- To improve portability and ease of access, keep all your main files on the Windows partition.
 
 # Deleting your Linux distribution
 
