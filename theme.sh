@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo pacman -S papirus-icon-theme 
+sudo pacman -S papirus-icon-theme gucharmap
 paru -S dracula-gtk-theme

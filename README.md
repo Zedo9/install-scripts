@@ -57,11 +57,19 @@ arch-chroot /mnt
 ```
 
 - Create swapfile if wanted :
+  - Using fallocate (deprecated method) :
+  ```
+  fallocate -l 4GB /swapfile
+  ```
+  - Using dd :
+  ```
+  dd if=/dev/zero of=/swapfile bs=1M count=4096 status=progress
+  ```
 
 ```
-fallocate -l 4GB /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
+  chmod 600 /swapfile
+  mkswap /swapfile
+
 ```
 
 Add `/swapfile none swap defaults 0 0` to the /etc/fstab :
@@ -69,17 +77,22 @@ Add `/swapfile none swap defaults 0 0` to the /etc/fstab :
 - Set your timezone :
 
 ```
+
 ln -sf /usr/share/zoneinfo/Africa/Tunis /etc/localtime
 hwclock --systohc
+
 ```
 
 - Generate locales :
   Uncomment `EN_US-utf-8` in **/etc/locale.gen** then run
 
 ```
+
 locale-gen
+
 ```
 
+- Make all script files executable
 - Check then run **base.sh**
 - Create Root password with `passwd`
 
@@ -91,27 +104,35 @@ locale-gen
 - Install Grub (For EFI) :
 
 ```
+
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+
 ```
 
 - Create grub config :
 
 ```
+
 grub-mkconfig -o /boot/grub/grub.cfg
+
 ```
 
 ## Add a user
 
 ```
+
 useradd -mG wheel,audio,video,input zedo
 passwd zedo
 usermod -c "Chedly" Zedo
+
 ```
 
 - Allow wheel group to run commands with sudo by uncommenting `%wheel ALL=(ALL) ALL`
 
 ```
+
 EDITOR=nvim visudo
+
 ```
 
 - umount -a, exit and reboot
@@ -123,7 +144,9 @@ EDITOR=nvim visudo
 - Add nvidia and i915 (Intel) modules to `/etc/mkinitcpio.conf`
 
 ```
+
 sudo mkinitcpio -p linux
+
 ```
 
 # Fixes
@@ -134,14 +157,16 @@ sudo mkinitcpio -p linux
 - Paste the following inside it :
 
 ```
+
 Section "InputClass"
-        Identifier "touchpad"
-        Driver "libinput"
-        MatchIsTouchpad "on"
-        Option "ClickMethod" "clickfinger"
-        Option "Tapping" "on"
-        Option "TappingButtonMap" "lrm"
+Identifier "touchpad"
+Driver "libinput"
+MatchIsTouchpad "on"
+Option "ClickMethod" "clickfinger"
+Option "Tapping" "on"
+Option "TappingButtonMap" "lrm"
 EndSection
+
 ```
 
 - More information [here](https://wiki.archlinux.org/title/Libinput) and [here](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS).
