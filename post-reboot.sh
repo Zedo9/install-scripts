@@ -6,7 +6,10 @@ sudo hwclock --systohc
 # sudo pacman -S x86-video-intel
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 sudo pacman -S firefox alacritty nautilus picom ranger ueberzug feh
-sudo pacman -S lxappearance evince
+sudo pacman -S lxappearance
+
+# PDF
+sudo pacman -S evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
 
 paru -S brave-bin
 
@@ -15,9 +18,11 @@ sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 
 sudo pacman -S lxsession flameshot gsimplecal
 
-# WM
-# sudo pacman -S awesome rofi
-sudo pacman -S dunst
+# Awesome
+sudo pacman -S awesome rofi
+
+# DWM - I3 - Sway
+# sudo pacman -S dunst
 
 # Systray stuff
 sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
