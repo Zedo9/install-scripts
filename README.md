@@ -160,3 +160,11 @@ EndSection
 
 - Append `export _JAVA_AWT_WM_NONREPARENTING=1` to `/etc/profile.d/jre.sh`
 - Append `export AWT_TOOLKIT=MToolkit` and `export _JAVA_AWT_WM_NONREPARENTING=1` to window manager start script (.xinitrc...)
+
+## Switch default POSIX shell interpreter to Dash instead of Bash
+
+- In order to improve portability and performance when executing POSIX compliant shell scripts, Download `dash` and link it symbolically to /usr/bin/sh. More information on this topic in the [Arch Wiki](https://wiki.archlinux.org/title/Dash).
+
+```
+# ln -sfT dash /usr/bin/sh
+```
