@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo pacman -S libreoffice-fresh hunspell-en_US hunspell-fr texlive-most
+sudo pacman -S libreoffice-fresh hunspell-en_US hunspell-fr texlive-most texlive-lang
