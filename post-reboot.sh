@@ -3,10 +3,17 @@
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
+# Intel
 # sudo pacman -S x86-video-intel
+
+# Nvidia
 sudo pacman -S nvidia nvidia-utils nvidia-settings
-sudo pacman -S firefox alacritty nautilus picom ranger ueberzug feh
-sudo pacman -S lxappearance
+
+# Main apps
+sudo pacman -S firefox alacritty nautilus ranger ueberzug feh
+
+# Tools
+sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal
 
 # PDF
 sudo pacman -S evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
@@ -16,10 +23,8 @@ paru -S brave-bin
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 
-sudo pacman -S lxsession flameshot gsimplecal
-
 # Awesome
-sudo pacman -S awesome rofi
+sudo pacman -S awesome rofi lxsession picom
 
 # DWM - I3 - Sway
 # sudo pacman -S dunst
@@ -32,8 +37,8 @@ paru -S ly
 sudo systemctl enable ly.service
 
 # Wayland
-#sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr wl-clipboard swappy grim slurp libnotify dunst
-#paru -S wdisplays sway-desktop-launcher
+sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients xdg-desktop-portal-wlr libpipewire02 polkit-gnome
+paru -S wdisplays sway-desktop-launcher
 
 # Media
 sudo pacman -S mpv youtube-dl vlc
@@ -51,13 +56,13 @@ sudo pacman -S dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 f
 sudo pacman -S net-tools bind-tools traceroute rsync wget
 
 # Pulse audio
-sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects playerctl
+sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects 
 
 # Pipewire
 # sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
 
 # Fonts 
-paru -S ttf-ms-fonts
+paru -S ttf-ms-fonts ttf-monaco
 
 sudo pacman -S terminus-font noto-fonts noto-fonts-cjk ttf-dejavu ttf-liberation ttf-opensans gsfonts sdl_ttf ttf-bitstream-vera xorg-fonts-type1 gnu-free-fonts ttf-caladea ttf-carlito ttf-croscore ttf-hack ttf-junicode ttf-linux-libertine opendesktop-fonts ttf-anonymous-pro ttf-arphic-ukai ttf-arphic-uming ttf-baekmuk ttf-cascadia-code ttf-cormorant ttf-droid ttf-fantasque-sans-mono ttf-fira-code ttf-fira-sans ttf-fira-mono ttf-font-awesome ttf-hanazono ttf-ibm-plex ttf-hannom ttf-inconsolata ttf-indic-otf ttf-indic-otf ttf-ionicons ttf-jetbrains-mono ttf-joypixels ttf-khmer ttf-lato ttf-nerd-fonts-symbols ttf-opensans ttf-proggy-clean ttf-roboto adobe-source-code-pro-fonts ttf-ubuntu-font-family
 
