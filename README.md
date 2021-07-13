@@ -27,12 +27,16 @@ exit
 - Create partitions with cfdisk / cgdisk
 - Format partitions vfat and ext4 (EFI At least 300M)
 - Mount partitions :
-  - mount /root/partition /mnt
-  - mkdir -p /mnt/boot/efi
-  - mount /efi/partition /mnt/boot/efi
+  ```bash
+  mount /root/partition /mnt
+  mkdir -p /mnt/boot/efi
+  mount /efi/partition /mnt/boot/efi
+  ```
   - If Dual booting with windows :
-    - mkdir /windows10
-    - mount /windows/partition /mnt/windows10
+    ```bash
+    mkdir /windows10
+    mount /windows/partition /mnt/windows10
+    ```
 
 # Base system
 
@@ -71,7 +75,7 @@ chmod 600 /swapfile
 mkswap /swapfile
 ```
 
-Add `/swapfile none swap defaults 0 0` to the /etc/fstab :
+Add `/swapfile none swap defaults 0 0` to the `/etc/fstab` :
 
 - Set your timezone :
 
@@ -81,11 +85,10 @@ hwclock --systohc
 ```
 
 - Generate locales :
-  Uncomment `EN_US-utf-8` in **/etc/locale.gen** then run
-
-```
-locale-gen
-```
+  - Uncomment `EN_US-utf-8` in **/etc/locale.gen** then run
+  ```
+  locale-gen
+  ```
 
 - Make all script files executable
 - Check then run **base.sh**
@@ -93,20 +96,16 @@ locale-gen
 
 ## Bootloader
 
-- Edit /etc/default/grub and remove quiet flag.
-  If Dual booting, append this line to `/etc/default/grub` :
-  **GRUB_DISABLE_OS_PROBER=false**
+- Edit /etc/default/grub and remove quiet flag. **If Dual booting, append this line to `/etc/default/grub`** : **GRUB_DISABLE_OS_PROBER=false**
 - Install Grub (For EFI) :
-
-```
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
-```
+  ```
+  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+  ```
 
 - Create grub config :
-
-```
-grub-mkconfig -o /boot/grub/grub.cfg
-```
+  ```
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
 
 ## Add a user
 
@@ -122,13 +121,13 @@ usermod -c "Chedly" Zedo
 EDITOR=nvim visudo
 ```
 
-- umount -a, exit and reboot
+- umount -a, exit and reboot.
 
 # Post-Reboot
 
-- Connect to your network with nmtui
-- run `post-reboot.sh`
-- Add nvidia and i915 (Intel) modules to `/etc/mkinitcpio.conf`
+- Connect to your network with nmtui.
+- run `post-reboot.sh`.
+- Add nvidia and i915 (Intel) modules to `/etc/mkinitcpio.conf`.
 
 ```
 sudo mkinitcpio -p linux
