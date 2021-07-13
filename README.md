@@ -134,9 +134,9 @@ EDITOR=nvim visudo
 sudo mkinitcpio -p linux
 ```
 
-# Fixes
+# Fixes and tips
 
-## Tapping (laptops)
+## Tapping on Xorg (laptops)
 
 - Create a new file under `/etc/X11/xorg.conf.d/30-touchpad.conf`
 - Paste the following inside it :
@@ -154,7 +154,7 @@ EndSection
 
 - More information [here](https://wiki.archlinux.org/title/Libinput) and [here](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS).
 
-## Java applications
+## Java applications (DWM)
 
 **[Source](https://wiki.archlinux.org/title/Dwm#Fixing_misbehaving_Java_applications)**
 
@@ -168,3 +168,22 @@ EndSection
 ```
 # ln -sfT dash /usr/bin/sh
 ```
+
+## Wayland
+* Wayland is the next generation Display Protocol for Linux.The Linux ecosystem's transition to Wayland has been marching steadily forward through the years.
+
+* There are some major applications that don't (or won't or can't) support Wayland. Programs like this can still be run in a Wayland environment through an isolated X instance called XWayland. This means that the transition to Wayland can be gradual: you won't lose access to older programs that you still need.
+
+* To run Electron or Chromium based browsers in Wayland **(Discord hasn't yet switched to electron 12 to support Wayland)**, add the following flags :
+
+```bash
+brave/code --enable-features=UseOzonePlatform --ozone-platform=wayland
+```
+* Check which apps running on XWayland : 
+```bash
+xlsclients
+```
+
+* To enable screen sharting features, make sure you have `xdg-desktop-portal-wlr` and `libpipewire02` installed. When prompted for which screen, choose **Use operating system settings**. You cursor will change to indicate that you can choose the screen to share.
+
+* More tips and info on Wayland in this [article](https://www.fosskers.ca/en/blog/wayland#orgcf32d8) and this [website](https://arewewaylandyet.com/).
