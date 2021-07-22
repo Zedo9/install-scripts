@@ -10,7 +10,7 @@ sudo hwclock --systohc
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 
 # Main apps
-sudo pacman -S firefox alacritty nautilus ranger ueberzug feh
+sudo pacman -S alacritty nautilus ranger ueberzug feh
 
 # Tools
 sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal
@@ -18,7 +18,12 @@ sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal
 # PDF
 sudo pacman -S evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
 
+# Browsers
 paru -S brave-bin
+sudo pacman -S firefox
+
+# Cloud utilities
+paru -S megasync-bin
 
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
@@ -37,8 +42,8 @@ paru -S ly
 sudo systemctl enable ly.service
 
 # Wayland
-sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients xdg-desktop-portal-wlr libpipewire02 polkit-gnome
-paru -S wdisplays sway-desktop-launcher
+#sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients xdg-desktop-portal-wlr libpipewire02 polkit-gnome
+#paru -S wdisplays sway-desktop-launcher
 
 # Media
 sudo pacman -S mpv youtube-dl vlc
@@ -50,7 +55,7 @@ sudo pacman -S zip unzip unrar p7zip lzop
 sudo pacman -S xf86-input-libinput xf86-input-synaptics
 
 # Filesystem tools
-sudo pacman -S dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 fuse3 fuseiso
+sudo pacman -S gnome-disk-utility dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 fuse3 fuseiso
 
 # Networking tools
 sudo pacman -S net-tools bind-tools traceroute rsync wget

@@ -20,7 +20,7 @@ pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_suppli
 pacman -S tlp light
 systemctl enable tlp 
 
-Echo "---Services---"
+echo "---Services---"
 systemctl enable NetworkManager
 # systemctl enable bluetooth
 systemctl enable sshd
