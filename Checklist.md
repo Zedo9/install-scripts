@@ -1,11 +1,11 @@
 # Install checklist
 
-- [ ] base
-- [ ] post-reboot
+- [x] base
+- [x] post-reboot(No Wayland)
 - [ ] dev-tools
-- [ ] theme
+- [x] theme
 - [ ] document
-- [ ] Download wallpapers
+- [x] Download wallpapers
 - [ ] Clone dotfiles
 - [ ] Setup Github ssh keys
 - [ ] Download VS Code config with Settings Sync
