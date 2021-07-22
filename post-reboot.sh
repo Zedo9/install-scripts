@@ -3,6 +3,11 @@
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
+echo "---Installing Paru---"
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
 # Intel
 # sudo pacman -S x86-video-intel
 

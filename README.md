@@ -24,19 +24,28 @@ exit
 
 # Preparing Partitions
 
-- Create partitions with cfdisk / cgdisk
+- Create partitions with cfdisk / cgdisk (/dev/device)
 - Format partitions vfat and ext4 (EFI At least 300M)
+
+```sh
+mkfs.vfat /efi/partition
+mkfs.ext4 /root/partition
+```
+
 - Mount partitions :
-  ```bash
-  mount /root/partition /mnt
-  mkdir -p /mnt/boot/efi
-  mount /efi/partition /mnt/boot/efi
-  ```
-  - If Dual booting with windows :
-    ```bash
-    mkdir /windows10
-    mount /windows/partition /mnt/windows10
-    ```
+
+```sh
+mount /root/partition /mnt
+mkdir -p /mnt/boot/efi
+mount /efi/partition /mnt/boot/efi
+```
+
+- If Dual booting with windows :
+
+```bash
+mkdir /windows10
+mount /windows/partition /mnt/windows10
+```
 
 # Base system
 
@@ -75,21 +84,24 @@ chmod 600 /swapfile
 mkswap /swapfile
 ```
 
-Add `/swapfile none swap defaults 0 0` to the `/etc/fstab` :
+Add `/swapfile none swap defaults 0 0` to the `/etc/fstab`
 
 - Set your timezone :
 
-```
+```sh
 ln -sf /usr/share/zoneinfo/Africa/Tunis /etc/localtime
 hwclock --systohc
 ```
 
 - Generate locales :
-  - Uncomment `EN_US-utf-8` in **/etc/locale.gen** then run
-  ```
-  locale-gen
-  ```
 
+  - Uncomment `en_US-utf-8` in **/etc/locale.gen** then run
+
+```sh
+locale-gen
+```
+
+- Clone install-scripts
 - Make all script files executable
 - Check then run **base.sh**
 - Create Root password with `passwd`
@@ -98,18 +110,20 @@ hwclock --systohc
 
 - Edit /etc/default/grub and remove quiet flag. **If Dual booting, append this line to `/etc/default/grub`** : **GRUB_DISABLE_OS_PROBER=false**
 - Install Grub (For EFI) :
-  ```
-  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
-  ```
+
+```sh
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+```
 
 - Create grub config :
-  ```
-  grub-mkconfig -o /boot/grub/grub.cfg
-  ```
+
+```sh
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ## Add a user
 
-```
+```sh
 useradd -mG wheel,audio,video,input zedo
 passwd zedo
 usermod -c "Chedly" Zedo
@@ -117,7 +131,7 @@ usermod -c "Chedly" Zedo
 
 - Allow wheel group to run commands with sudo by uncommenting `%wheel ALL=(ALL) ALL`
 
-```
+```sh
 EDITOR=nvim visudo
 ```
 
@@ -126,10 +140,11 @@ EDITOR=nvim visudo
 # Post-Reboot
 
 - Connect to your network with nmtui.
-- run `post-reboot.sh`.
+- Run `post-reboot.sh`.
+- Change system76 power to preferred config.
 - Add nvidia and i915 (Intel) modules to `/etc/mkinitcpio.conf`.
 
-```
+```sh
 sudo mkinitcpio -p linux
 ```
 
@@ -169,20 +184,34 @@ EndSection
 ```
 
 ## Wayland
-* Wayland is the next generation Display Protocol for Linux.The Linux ecosystem's transition to Wayland has been marching steadily forward through the years.
 
-* There are some major applications that don't (or won't or can't) support Wayland. Programs like this can still be run in a Wayland environment through an isolated X instance called XWayland. This means that the transition to Wayland can be gradual: you won't lose access to older programs that you still need.
+- Wayland is the next generation Display Protocol for Linux.The Linux ecosystem's transition to Wayland has been marching steadily forward through the years.
 
-* To run Electron or Chromium based browsers in Wayland **(Discord hasn't yet switched to electron 12 to support Wayland)**, add the following flags :
+- There are some major applications that don't (or won't or can't) support Wayland. Programs like this can still be run in a Wayland environment through an isolated X instance called XWayland. This means that the transition to Wayland can be gradual: you won't lose access to older programs that you still need.
+
+- To run Electron or Chromium based browsers in Wayland **(Discord hasn't yet switched to electron 12 to support Wayland)**, add the following flags :
 
 ```bash
 brave/code --enable-features=UseOzonePlatform --ozone-platform=wayland
 ```
-* Check which apps running on XWayland : 
+
+- Check which apps running on XWayland :
+
 ```bash
 xlsclients
 ```
 
-* To enable screen sharting features, make sure you have `xdg-desktop-portal-wlr` and `libpipewire02` installed. When prompted for which screen, choose **Use operating system settings**. You cursor will change to indicate that you can choose the screen to share.
+- To enable screen sharting features, make sure you have `xdg-desktop-portal-wlr` and `libpipewire02` installed. When prompted for which screen, choose **Use operating system settings**. You cursor will change to indicate that you can choose the screen to share.
 
-* More tips and info on Wayland in this [article](https://www.fosskers.ca/en/blog/wayland#orgcf32d8) and this [website](https://arewewaylandyet.com/).
+- More tips and info on Wayland in this [article](https://www.fosskers.ca/en/blog/wayland#orgcf32d8) and this [website](https://arewewaylandyet.com/).
+
+## Soft and hard blocked Wifi Cards
+
+- Many laptops have a hardware button (or switch) to turn off wireless card (Hard), however, the card can also be blocked by kernel(Soft). This can be handled by rfkill.
+
+```sh
+# Show current status
+rfkill list
+# Unblock soft blocked
+rfkill unblock all
+```

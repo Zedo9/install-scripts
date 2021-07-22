@@ -12,9 +12,12 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1 localhost" >> /etc/hosts
 echo "127.0.1.1 arch-asus.localdomain arch-asus" >> /etc/hosts
 
+localectl set-x11-keymap fr
+
+# dual boot / Windows
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi acpi_call openssh man
+pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi acpi_call openssh man htop neofetch
 
 #Laptop 
 pacman -S tlp light
@@ -25,9 +28,4 @@ systemctl enable NetworkManager
 # systemctl enable bluetooth
 systemctl enable sshd
 systemctl enable avahi-daemon
-# systemctl enable fstrim.timer
-
-echo "---Installing Paru---"
-git clone https://aur.arch.org/paru
-cd paru
-makepkg -si
+systemctl enable fstrim.timer
