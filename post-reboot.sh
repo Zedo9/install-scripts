@@ -9,7 +9,7 @@ cd paru
 makepkg -si
 
 # Intel
-# sudo pacman -S x86-video-intel
+#sudo pacman -S x86-video-intel
 
 # Nvidia
 sudo pacman -S nvidia nvidia-utils nvidia-settings
@@ -28,7 +28,7 @@ paru -S brave-bin
 sudo pacman -S firefox
 
 # Cloud utilities
-paru -S megasync-bin
+#paru -S megasync-bin
 
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
@@ -36,15 +36,15 @@ sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 # Awesome
 sudo pacman -S awesome rofi lxsession picom
 
-# DWM - I3 - Sway
-# sudo pacman -S dunst
+# DWM 
+paru -S skippy-xd-git dunst
 
 # Systray stuff
 sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 
 # Display manager
-paru -S ly 
-sudo systemctl enable ly.service
+#paru -S ly 
+#sudo systemctl enable ly.service
 
 # Wayland
 #sudo pacman -S sway swaylock swayidle xorg-xwayland xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients xdg-desktop-portal-wlr libpipewire02 polkit-gnome
@@ -69,7 +69,7 @@ sudo pacman -S net-tools bind-tools traceroute rsync wget
 sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects 
 
 # Pipewire
-# sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
+#sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
 
 # Fonts 
 paru -S ttf-ms-fonts ttf-monaco
