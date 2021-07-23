@@ -66,7 +66,7 @@ sudo pacman -S gnome-disk-utility dosfstools ntfs-3g btrfs-progs exfatutils gptf
 sudo pacman -S net-tools bind-tools traceroute rsync wget
 
 # Pulse audio
-sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol pulseeffects 
+sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol easyeffects 
 
 # Pipewire
 #sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
