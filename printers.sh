@@ -2,4 +2,4 @@
 
 sudo pacman -S cups ghostscript cups-pdf hplip gutenprint
 
-systemctl enable cups.service
+sudo systemctl enable cups.service
