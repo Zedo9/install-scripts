@@ -3,6 +3,7 @@
 This repo is a guide I created for installing Arch Linux (Or any other distro if you want) from scratch. It inculdes several scripts for installing the main tools I use on my different machines split into different categories and some tips and tricks for fixing common problems (Dual boot - Trackpads...).
 
 - All information is extrated and heavily inspired by the Arch Wiki.
+- You can checkout the tips and tricks [here](tips-and-tricks.md).
 
 # Getting started
 
@@ -142,76 +143,8 @@ EDITOR=nvim visudo
 - Connect to your network with nmtui.
 - Run `post-reboot.sh`.
 - Change system76 power to preferred config.
-- Add nvidia and i915 (Intel) modules to `/etc/mkinitcpio.conf`.
+- Add `nvidia` and `i915` (Intel) or `amdgpu radeon` (AMD) modules to `/etc/mkinitcpio.conf`.
 
 ```sh
 sudo mkinitcpio -p linux
-```
-
-# Fixes and tips
-
-## Tapping on Xorg (laptops)
-
-- Create a new file under `/etc/X11/xorg.conf.d/30-touchpad.conf`
-- Paste the following inside it :
-
-```
-Section "InputClass"
-Identifier "touchpad"
-Driver "libinput"
-MatchIsTouchpad "on"
-Option "ClickMethod" "clickfinger"
-Option "Tapping" "on"
-Option "TappingButtonMap" "lrm"
-EndSection
-```
-
-- More information [here](https://wiki.archlinux.org/title/Libinput) and [here](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS).
-
-## Java applications (DWM)
-
-**[Source](https://wiki.archlinux.org/title/Dwm#Fixing_misbehaving_Java_applications)**
-
-- Append `export _JAVA_AWT_WM_NONREPARENTING=1` to `/etc/profile.d/jre.sh`
-- Append `export AWT_TOOLKIT=MToolkit` and `export _JAVA_AWT_WM_NONREPARENTING=1` to window manager start script (.xinitrc...)
-
-## Switch default POSIX shell interpreter to Dash instead of Bash
-
-- In order to improve portability and performance when executing POSIX compliant shell scripts, Download `dash` and link it symbolically to /usr/bin/sh. More information on this topic in the [Arch Wiki](https://wiki.archlinux.org/title/Dash).
-
-```
-# ln -sfT dash /usr/bin/sh
-```
-
-## Wayland
-
-- Wayland is the next generation Display Protocol for Linux.The Linux ecosystem's transition to Wayland has been marching steadily forward through the years.
-
-- There are some major applications that don't (or won't or can't) support Wayland. Programs like this can still be run in a Wayland environment through an isolated X instance called XWayland. This means that the transition to Wayland can be gradual: you won't lose access to older programs that you still need.
-
-- To run Electron or Chromium based browsers in Wayland **(Discord hasn't yet switched to electron 12 to support Wayland)**, add the following flags :
-
-```bash
-brave/code --enable-features=UseOzonePlatform --ozone-platform=wayland
-```
-
-- Check which apps running on XWayland :
-
-```bash
-xlsclients
-```
-
-- To enable screen sharting features, make sure you have `xdg-desktop-portal-wlr` and `libpipewire02` installed. When prompted for which screen, choose **Use operating system settings**. You cursor will change to indicate that you can choose the screen to share.
-
-- More tips and info on Wayland in this [article](https://www.fosskers.ca/en/blog/wayland#orgcf32d8) and this [website](https://arewewaylandyet.com/).
-
-## Soft and hard blocked Wifi Cards
-
-- Many laptops have a hardware button (or switch) to turn off wireless card (Hard), however, the card can also be blocked by kernel(Soft). This can be handled by rfkill.
-
-```sh
-# Show current status
-rfkill list
-# Unblock soft blocked
-rfkill unblock all
 ```
