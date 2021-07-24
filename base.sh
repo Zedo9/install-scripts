@@ -19,6 +19,10 @@ pacman -S os-prober ntfs-3g
 
 pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi acpi_call openssh man htop neofetch
 
+# Switch Sh interpreter to Dash
+pacman -S dash
+ln -sfT dash /usr/bin/sh
+
 #Laptop 
 pacman -S tlp light
 systemctl enable tlp 
