@@ -10,6 +10,7 @@
 - [Using internal mic while headhphones are plugged](#using-internal-mic-while-headhphones-are-plugged)
 - [Fix backlight issues on laptops with AMD Ryzen CPUs](#fix-backlight-issues-on-laptops-with-amd-ryzen-cpus)
 - [Lenovo Ideapad 5 tricks](#lenovo-ideapad-5-tricks)
+- [Disabling internal speaker](#disabling-internal-speaker)
 
 ## Tapping on Xorg for laptops
 
@@ -109,3 +110,25 @@ Previous kernels required patching: The workaround can be found in this [GitLab 
 These tips should apply to Ideapad Gaming 3 too, icluding [battery conservation mode](https://wiki.archlinux.org/title/Lenovo_IdeaPad_5_14are05#Battery_Conservation), [system performance mode](https://wiki.archlinux.org/title/Lenovo_IdeaPad_5_14are05#System_Performance_Mode) and [rapid charge](https://wiki.archlinux.org/title/Lenovo_IdeaPad_5_14are05#Rapid_Charge).
 
 - Note that if you are dual booting with Windows, changing some settings on Linux will override your settings on Windows.
+
+## Disabling internal speaker
+
+You can find out that your laptop has an internal speaker if it emits some beeps on specific actions. This can be annoying especially if you're working in a public space. To disable these speakers, there are 3 methods as specified in the [Arch Wiki](https://wiki.archlinux.org/title/PC_speaker#Globally):
+
+1. Disabling it by unloading the speaker kernel module (As root) with :
+
+```sh
+rmmod pcspkr
+```
+
+2. Blacklisting the module by creating a file under `/etc/modprobe.d/nobeep.conf` and adding the following line :
+
+```
+blacklist pcspkr
+```
+
+3. Blacklisting the module on the kernel commandline. Just add this line to your bootloader's kernel line:
+
+```
+modprobe.blacklist=pcspkr
+```
