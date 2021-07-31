@@ -15,7 +15,7 @@ makepkg -si
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 
 # Main apps
-sudo pacman -S alacritty pcmanfm ranger ueberzug feh
+sudo pacman -S alacritty pcmanfm nautilus ranger ueberzug feh
 
 # Tools
 sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal discord
@@ -34,8 +34,9 @@ sudo pacman -S firefox
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
 
 # Launcher
-paru -S ulauncher
-#sudo pacman -S rofi sway-launcher-desktop
+# paru -S ulauncher sway-launcher-desktop 
+# sudo pacman -S rofi
+sudo pacman -S wofi
 
 # Awesome
 sudo pacman -S awesome lxsession picom
@@ -47,8 +48,8 @@ paru -S skippy-xd-git dunst
 sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 
 # Display manager
-paru -S ly 
-sudo systemctl enable ly.service
+# paru -S ly 
+# sudo systemctl enable ly.service
 
 # Wayland
 #sudo pacman -S sway swaylock swayidle xorg-xwayland waybar xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients nautilus xdg-desktop-portal-wlr libpipewire02 polkit-gnome wmctrl
