@@ -15,7 +15,7 @@ makepkg -si
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 
 # Main apps
-sudo pacman -S alacritty pcmanfm nautilus ranger ueberzug feh
+sudo pacman -S alacritty nautilus ranger ueberzug feh
 
 # Tools
 sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal discord
@@ -25,7 +25,7 @@ sudo pacman -S evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-
 
 # Browsers
 paru -S brave-bin
-sudo pacman -S firefox
+sudo pacman -S firefox qutebrowser
 
 # Cloud utilities
 #paru -S megasync-bin
@@ -56,7 +56,7 @@ sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 #paru -S wdisplays 
 
 # Media
-sudo pacman -S mpv youtube-dl vlc
+sudo pacman -S mpv youtube-dl vlc imv
 
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
