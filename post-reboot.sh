@@ -31,7 +31,7 @@ sudo pacman -S firefox qutebrowser
 #paru -S megasync-bin
 
 # Xorg
-sudo pacman -S xorg xorg-xinput xorg-xinit numlockx
+sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gtk
 
 # Launcher
 # paru -S ulauncher sway-launcher-desktop 
