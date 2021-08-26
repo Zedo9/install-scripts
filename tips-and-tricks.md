@@ -51,17 +51,23 @@ EndSection
 
 - There are some major applications that don't (or won't or can't) support Wayland. Programs like this can still be run in a Wayland environment through an isolated X instance called XWayland. This means that the transition to Wayland can be gradual: you won't lose access to older programs that you still need.
 
-- To run Electron or Chromium based browsers in Wayland **(Discord hasn't yet switched to electron 12 to support Wayland)**, add the following flags :
+- To run Electron or Chromium based browsers in Wayland **([The official build of Discord hasn't yet switched to electron 12 to support Wayland](https://support.discord.com/hc/en-us/community/posts/360047644231-Native-Wayland-Support) - You can force it to use the newer version of electron by installing the newest version of `electron` on your system and replacing the `discord` package with `discord_arch_electron`)**, add the following flags :
 
 ```bash
-brave/code --enable-features=UseOzonePlatform --ozone-platform=wayland
+brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 ```
+
+You can also create config files and add these flags so that you don't have to type them everytime, for example, for brave to run natively, create `brave-flags.conf` under `~/.config/` and paste the flags inside. Same goes for Chromium, and Electron apps (If they use your system's electron version and it must have a version > 12); `chromium-flags.conf` and `electron-flags.conf.
+
+You can also force HiDPI (For high resolution screens), by adding the `--high-dpi-support=1` flag.
 
 - Check which apps running on XWayland :
 
 ```bash
 xlsclients
 ```
+
+- If you are a Visual Studio Code user on Arch Linux, I would advise against using the binary package `visual-studio-code-bin` since it comes bundled with its electron version and offers poor integration with your system. Just install the open source package `code` along with `code-features`, `code-marketplace` and `code-icons` from the AUR to enable all necessary features from the proprietary package. More info on the difference between the two distributions [here](https://github.com/microsoft/vscode/wiki/Differences-between-the-repository-and-Visual-Studio-Code).
 
 - To enable screen sharting features, make sure you have `xdg-desktop-portal-wlr` and `libpipewire02` installed. When prompted for which screen, choose **Use operating system settings**. You cursor will change to indicate that you can choose the screen to share.
 
