@@ -1,6 +1,6 @@
 #!/bin/sh
 
-paru -S visual-studio-code-bin intellij-idea-community-edition
+paru -S code code-features code-icons code-marketplace intellij-idea-community-edition
 pacman -S jdk11-openjdk
 
 # Install nodejs
