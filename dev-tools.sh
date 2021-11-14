@@ -1,12 +1,14 @@
 #!/bin/sh
 
-paru -S code code-features code-icons code-marketplace intellij-idea-community-edition
-pacman -S jdk11-openjdk
+paru -S visual-studio-code-bin 
+# paru -S code code-features code-icons code-marketplace 
+pacman -S jdk-openjdk intellij-idea-community-edition dotnet-sdk
 
 # Install nodejs
 # https://github.com/nvm-sh/nvm
 # nvm install --lts
-# nvm user --lts
+# nvm use --lts
+# or paru -S nvm
 
-# Later
+# Docker
 # pacman -S docker docker-compose

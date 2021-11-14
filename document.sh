@@ -1,3 +1,5 @@
 #!/bin/sh
 
-sudo pacman -S libreoffice-fresh hunspell-en_US hunspell-fr texlive-most texlive-lang biber
+sudo pacman -S onlyoffice-bin hunspell-en_US hunspell-fr texlive-most texlive-lang biber
+# Tesseract transforms images into text
+paru -S texlive-tikz-uml tesseract

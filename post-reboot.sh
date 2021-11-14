@@ -15,10 +15,12 @@ makepkg -si
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 
 # Main apps
-sudo pacman -S alacritty nautilus ranger ueberzug feh
+sudo pacman -S alacritty thunar thunar-archive-plugin thunar-media-tags-plugin file-roller raw-thumbnailer ranger ueberzug feh
 
 # Tools
-sudo pacman -S lxappearance arandr playerctl flameshot gsimplecal discord
+sudo pacman -S lxappearance playerctl flameshot gsimplecal discord liferea
+
+paru -S mons lxrandr-gtk3 arandr
 
 # PDF
 sudo pacman -S evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
@@ -28,7 +30,7 @@ paru -S brave-bin
 sudo pacman -S firefox qutebrowser
 
 # Cloud utilities
-#paru -S megasync-bin
+#paru -S rclone
 
 # Xorg
 sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gtk
@@ -39,10 +41,10 @@ sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gtk
 sudo pacman -S wofi
 
 # Awesome
-sudo pacman -S awesome lxsession picom
+# sudo pacman -S awesome polkit-gnome picom
 
 # DWM 
-paru -S skippy-xd-git dunst
+paru -S dunst
 
 # Systray stuff
 sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
@@ -52,8 +54,8 @@ sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 # sudo systemctl enable ly.service
 
 # Wayland
-#sudo pacman -S sway swaylock swayidle xorg-xwayland waybar xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients nautilus xdg-desktop-portal-wlr libpipewire02 polkit-gnome wmctrl
-#paru -S wdisplays 
+# sudo pacman -S sway swaylock-effects swayidle xorg-xwayland waybar xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients libpipewire02 wmctrl
+# paru -S wdisplays 
 
 # Media
 sudo pacman -S mpv youtube-dl vlc imv
@@ -61,7 +63,7 @@ sudo pacman -S mpv youtube-dl vlc imv
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
 
-# Inputs
+# Inputs (Install either one, preferably xf86-input-libinput)
 sudo pacman -S xf86-input-libinput xf86-input-synaptics
 
 # Filesystem tools

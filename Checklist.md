@@ -2,13 +2,14 @@
 
 - [x] base
 - [x] post-reboot
-- [ ] dev-tools
+- [x] dev-tools
 - [x] theme
-- [ ] document
+- [x] document
 - [x] Download wallpapers
 - [x] Clone dotfiles
 - [x] Setup Github ssh keys
-- [ ] Download VS Code config with Settings Sync
+- [x] Download VS Code config with Settings Sync
+- [x] Setup rclone and configure backups
 - Optional :
   - [ ] printers
   - [ ] multimedia

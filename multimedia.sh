@@ -7,4 +7,4 @@ sudo pacman -S inkscape
 sudo pacman -S lmms
 
 # Screen recording
-paru -S obs-studio
+paru -S obs-studio peek
