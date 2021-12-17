@@ -17,7 +17,7 @@ localectl set-x11-keymap fr
 # dual boot / Windows
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi acpi_call openssh man htop neofetch
+pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi psensor acpi_call openssh man htop neofetch blueman
 
 # Switch Sh interpreter to Dash
 pacman -S dash

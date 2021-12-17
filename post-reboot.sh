@@ -15,10 +15,10 @@ makepkg -si
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 
 # Main apps
-sudo pacman -S alacritty thunar thunar-archive-plugin thunar-media-tags-plugin file-roller raw-thumbnailer ranger ueberzug feh
+sudo pacman -S alacritty nautilus ranger ueberzug feh
 
 # Tools
-sudo pacman -S lxappearance playerctl flameshot gsimplecal discord liferea
+sudo pacman -S lxappearance polkit-gnome playerctl flameshot gsimplecal discord liferea
 
 paru -S mons lxrandr-gtk3 arandr
 
@@ -33,7 +33,7 @@ sudo pacman -S firefox qutebrowser
 #paru -S rclone
 
 # Xorg
-sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gtk
+sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gnome picom
 
 # Launcher
 # paru -S ulauncher sway-launcher-desktop 
@@ -41,7 +41,7 @@ sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gtk
 sudo pacman -S wofi
 
 # Awesome
-# sudo pacman -S awesome polkit-gnome picom
+# sudo pacman -S awesome
 
 # DWM 
 paru -S dunst
@@ -64,7 +64,8 @@ sudo pacman -S mpv youtube-dl vlc imv
 sudo pacman -S zip unzip unrar p7zip lzop
 
 # Inputs (Install either one, preferably xf86-input-libinput)
-sudo pacman -S xf86-input-libinput xf86-input-synaptics
+sudo pacman -S xf86-input-libinput 
+# sudo pacman -S xf86-input-synaptics
 
 # Filesystem tools
 sudo pacman -S gnome-disk-utility dosfstools ntfs-3g btrfs-progs exfatutils gptfdisk autofs fuse2 fuse3 fuseiso
@@ -72,11 +73,13 @@ sudo pacman -S gnome-disk-utility dosfstools ntfs-3g btrfs-progs exfatutils gptf
 # Networking tools
 sudo pacman -S net-tools bind-tools traceroute rsync wget
 
-# Pulse audio
-sudo pacman -S pulseaudio pulsemixer alsa-utils alsa-plugins pavucontrol easyeffects volumeicon
+# Audio 
+sudo pacman -S pavucontrol pulsemixer
+# Pulse
+# sudo pacman -S pulseaudio alsa-utils alsa-plugins easyeffects
 
 # Pipewire
-#sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
+sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
 
 # Fonts 
 paru -S ttf-ms-fonts ttf-monaco
