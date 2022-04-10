@@ -24,8 +24,10 @@ pacman -S dash
 ln -sfT dash /usr/bin/sh
 
 #Laptop 
-pacman -S tlp light
-systemctl enable tlp 
+pacman -S light
+
+# pacman -S tlp
+# systemctl enable tlp 
 
 echo "---Services---"
 systemctl enable NetworkManager

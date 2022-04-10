@@ -58,7 +58,7 @@ sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 # paru -S wdisplays 
 
 # Media
-sudo pacman -S mpv youtube-dl vlc imv
+sudo pacman -S mpv youtube-dl vlc imv eog
 
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
@@ -88,5 +88,9 @@ sudo pacman -S terminus-font noto-fonts noto-fonts-cjk ttf-dejavu ttf-liberation
 
 # Laptops
 sudo pacman -S cbatticon
-paru -S system76-power
-sudo systemctl enable system76-power.service
+
+paru -S auto-cpufreq
+sudo systemctl enable --now auto-cpufreq
+
+# paru -S system76-power
+# sudo systemctl enable system76-power.service
