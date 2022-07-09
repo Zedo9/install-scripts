@@ -144,6 +144,7 @@ EDITOR=nvim visudo
 - Run `post-reboot.sh`.
 - Change system76 power to preferred config.
 - Add `nvidia` and `i915` (Intel) or `amdgpu radeon` (AMD) modules to `/etc/mkinitcpio.conf`.
+- Enable the [Chaotic AUR](https://aur.chaotic.cx/).
 
 ```sh
 sudo mkinitcpio -p linux

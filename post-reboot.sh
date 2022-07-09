@@ -33,7 +33,7 @@ sudo pacman -S firefox qutebrowser
 #paru -S rclone
 
 # Xorg
-sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xdg-desktop-portal-gnome picom
+sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xclip xdg-desktop-portal-gnome picom
 
 # Launcher
 # paru -S ulauncher sway-launcher-desktop 
@@ -55,10 +55,10 @@ sudo pacman -S libappindicator-gtk2 libappindicator-gtk3
 
 # Wayland
 # sudo pacman -S sway swaylock-effects swayidle xorg-xwayland waybar xdg-desktop-portal-wlr qt5-wayland  wl-clipboard swappy grim slurp libnotify dunst glfw-wayland xorg-xlsclients libpipewire02 wmctrl
-# paru -S wdisplays 
+# paru -S wdisplays  wl-gammactl
 
 # Media
-sudo pacman -S mpv youtube-dl vlc imv eog
+sudo pacman -S mpv youtube-dl vlc imv eog pinta
 
 # Compression tools
 sudo pacman -S zip unzip unrar p7zip lzop
@@ -79,10 +79,10 @@ sudo pacman -S pavucontrol pulsemixer
 # sudo pacman -S pulseaudio alsa-utils alsa-plugins easyeffects
 
 # Pipewire
-sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol
+sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol qjackctl
 
 # Fonts 
-paru -S ttf-ms-fonts ttf-monaco
+paru -S ttf-ms-fonts ttf-monaco nerd-fonts-fira-code nerd-fonts-hack nerd-fonts-jetbrains-mono nerd-fonts-fantasque-sans-mono
 
 sudo pacman -S terminus-font noto-fonts noto-fonts-cjk ttf-dejavu ttf-liberation ttf-opensans gsfonts sdl_ttf ttf-bitstream-vera xorg-fonts-type1 gnu-free-fonts ttf-caladea ttf-carlito ttf-croscore ttf-hack ttf-junicode ttf-linux-libertine opendesktop-fonts ttf-anonymous-pro ttf-arphic-ukai ttf-arphic-uming ttf-baekmuk ttf-cascadia-code ttf-cormorant ttf-droid ttf-fantasque-sans-mono ttf-fira-code ttf-fira-sans ttf-fira-mono ttf-font-awesome ttf-hanazono ttf-ibm-plex ttf-hannom ttf-inconsolata ttf-indic-otf ttf-indic-otf ttf-ionicons ttf-jetbrains-mono ttf-joypixels ttf-khmer ttf-lato ttf-nerd-fonts-symbols ttf-opensans ttf-proggy-clean ttf-roboto adobe-source-code-pro-fonts ttf-ubuntu-font-family
 

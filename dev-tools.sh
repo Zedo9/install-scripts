@@ -9,3 +9,6 @@ paru -S dotnet-sdk dotnet-runtime dotnet-host aspnet-runtime
 
 # Docker
 pacman -S docker docker-compose
+
+# Useful TUIs
+paru -S lazygit lazydocker ncdu
