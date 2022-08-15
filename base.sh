@@ -17,21 +17,14 @@ localectl set-x11-keymap fr
 # dual boot / Windows
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector bluez bluez-utils xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi psensor acpi_call openssh man htop neofetch blueman
+pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi psensor acpi_call openssh man btop htop neofetch
 
 # Switch Sh interpreter to Dash
 pacman -S dash
 ln -sfT dash /usr/bin/sh
 
-#Laptop 
-pacman -S light
-
-# pacman -S tlp
-# systemctl enable tlp 
-
 echo "---Services---"
 systemctl enable NetworkManager
-# systemctl enable bluetooth
 systemctl enable sshd
 systemctl enable avahi-daemon
-systemctl enable fstrim.timer
+systemctl enable fstrim.timer # SSDs only
