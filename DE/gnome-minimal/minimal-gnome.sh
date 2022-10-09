@@ -15,5 +15,8 @@ gnome_extra_packages="gnome-connections gnome-nettool gnome-tweaks"
 
 paru -S $gnome_extra_packages
 
+# extensions
+paru -S gnome-shell-extension-appindicator gnome-shell-extension-freon gnome-shell-extension-net-speed
+
 # Import gnome configs
 # dconf load /org/gnome < gnome-backup

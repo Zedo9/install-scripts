@@ -2,14 +2,10 @@
 
 # Nerd fonts
 paru -S ttf-ms-fonts \
-ttf-monaco \
-nerd-fonts-fira-code \
-nerd-fonts-hack \
-nerd-fonts-jetbrains-mono \
-nerd-fonts-fantasque-sans-mono
+ttf-meslo-nerd-font-powerlevel10k \
 
-# Other (Nerd variant already installed)
-# sudo pacman -S ttf-hack ttf-fantasque-sans-mono ttf-fira-code ttf-jetbrains-mono 
+# Other
+sudo pacman -S ttf-hack ttf-fantasque-sans-mono ttf-fira-code ttf-jetbrains-mono 
 
 # Default fonts
 sudo pacman -S terminus-font \
@@ -33,7 +29,7 @@ ttf-anonymous-pro \
 ttf-arphic-ukai \
 ttf-arphic-uming \
 ttf-baekmuk \
-ttf-cascadia-code \
+otf-cascadia-code \
 ttf-cormorant \
 ttf-droid \
 ttf-fira-sans \
