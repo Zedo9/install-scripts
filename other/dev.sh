@@ -1,18 +1,16 @@
 #!/bin/sh
 
 # Configure ZSH
-paru -S zsh exa zsh-syntax-highlighting zsh-autosuggestions
-chsh -s /bin/zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo "export ZDOTDIR="$HOME"/.config/zsh" | sudo tee -a /etc/zsh/zshenv
-# echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+# paru -S zsh exa zsh-syntax-highlighting zsh-autosuggestions
+# chsh -s /bin/zsh
 
-paru -S visual-studio-code-bin 
-
-paru -S jdk-openjdk intellij-idea-community-edition
+# paru -S visual-studio-code-bin
+# paru -S jdk-openjdk intellij-idea-community-edition
 
 # dotnet Tools
 paru -S dotnet-sdk dotnet-runtime dotnet-host aspnet-runtime
+
+paru -S neovim stylua shellcheck shellfmt tmux fd fzf ripgrep
 
 # Node
 # USE THE OFFICIAL INSTALL SCRIPT FROM GITHUB

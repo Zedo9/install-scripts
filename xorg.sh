@@ -1,5 +1,9 @@
 #!/bin/sh
 
-sudo pacman -S xorg xorg-xinput xorg-xinit numlockx xclip picom redshift xdg-desktop-portal-gtk
+paru -S xorg xorg-xinit numlockx xclip feh picom redshift nwg-look
 
-paru -S mons lxrandr-gtk3 arandr lxappearance
+# Screens
+paru -S mons arandr
+
+# Clipboard
+paru -S clipmenu rofi
