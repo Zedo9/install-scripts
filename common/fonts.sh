@@ -6,7 +6,7 @@ paru -S ttf-ms-fonts
 # Meslo (Nerd Font + Powerlevel)
 paru -S ttf-meslo-nerd awesome-terminal-fonts
 # Nerd Fonts
-paru -S otf-cascadia-code-nerd ttf-firacode-nerd ttf-jetbrains-mono-nerd
+paru -S ttf-cascadia-code-nerd ttf-firacode-nerd ttf-jetbrains-mono-nerd
 
 # Default fonts
 paru -S terminus-font \
@@ -22,7 +22,7 @@ paru -S terminus-font \
     gnu-free-fonts \
     ttf-caladea \
     ttf-carlito \
-    ttf-linux-libertine \
+    libertinus-font \
     opendesktop-fonts \
     ttf-droid \
     ttf-font-awesome \

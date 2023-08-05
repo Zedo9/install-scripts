@@ -142,8 +142,7 @@ EDITOR=nvim visudo
 
 - Connect to your network with nmtui.
 - Run `post-reboot.sh`.
-- Change system76 power to preferred config.
-- Add `nvidia` and `i915` (Intel) or `amdgpu radeon` (AMD) modules to `/etc/mkinitcpio.conf`.
+- Add `nvidia` and `i915` (Intel) or `amdgpu radeon` (AMD) modules to `/etc/mkinitcpio.conf` if you encounter some problems.
 - Enable the [Chaotic AUR](https://aur.chaotic.cx/).
 
 ```sh

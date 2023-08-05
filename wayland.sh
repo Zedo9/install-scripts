@@ -2,9 +2,9 @@
 
 # Use this for better nvidia experience
 # paru -S hyprland-nvidia
-paru -S waybar-hyprland-git hyprland-git
+paru -S waybar-experimental-git sway-git wl-clipboard wlroots-nvidia
 
-paru -S pipewire wireplumber xdg-desktop-portal-hyprland-git
+paru -S pipewire wireplumber xdg-desktop-portal-hyprland
 
 # XWayland
 paru -S xorg-xlsclients xorg-xwayland

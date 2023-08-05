@@ -6,4 +6,4 @@ sudo pacman -S onlyoffice-bin hunspell-en_US hunspell-fr
 sudo pacman -S pdfarranger evince zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
 
 # Latex
-# sudo pacman -S texlive-most texlive-lang biber gummi
+# paru -S texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-xetex texlive-luatex

@@ -1,15 +1,11 @@
 #!/bin/sh
 
-# Switch Sh interpreter to Dash
-paru -S dash
-sudo ln -sfT dash /usr/bin/sh
-
 # Internet (Don't forget to enable hardware video decoding on Firefox and Brave)
 paru -S brave-bin firefox ungoogled-chromium
 
 # Files
-# paru -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler file-roller
-paru -S nautilus filemanager-actions nautilus-sendto nautilus-share file-roller
+paru -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler file-roller
+# paru -S nautilus filemanager-actions nautilus-sendto nautilus-share file-roller
 # Thumbnails
 paru -S tumbler poppler ffmpegthumbnailer freetype2 totem gnome-epub-thumbnailer
 # Virtual gvfs / Network sharing
@@ -61,9 +57,6 @@ paru -S pavucontrol pulsemixer alsa-utils pipewire pipewire-alsa pipewire-pulse 
 
 # Systray stuff
 paru -S libappindicator-gtk2 libappindicator-gtk3
-
-# Linux tools (usefull for cpu governor control, cpupower...)
-paru -S linux-tools
 
 echo "---Services---"
 systemctl enable NetworkManager

@@ -17,7 +17,10 @@ localectl set-x11-keymap fr
 # dual boot / Windows
 pacman -S os-prober ntfs-3g
 
-pacman -S grub efibootmgr networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector xdg-utils xdg-user-dirs inetutils dnsutils bash-completion acpi psensor acpi_call openssh man htop neofetch
+pacman -S grub efibootmgr linux-tools networkmanager rsync network-manager-applet wpa_supplicant dialog mtools dosfstools base-devel linux-headers git reflector xdg-utils xdg-user-dirs terminus-font inetutils dnsutils bash-completion acpi acpid psensor acpi_call openssh man htop neofetch
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # Switch Sh interpreter to Dash
 pacman -S dash
@@ -26,5 +29,6 @@ ln -sfT dash /usr/bin/sh
 echo "---Services---"
 systemctl enable NetworkManager
 systemctl enable sshd
+systemctl enable acpid
 systemctl enable avahi-daemon
 systemctl enable fstrim.timer # SSDs only
