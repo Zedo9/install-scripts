@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Configure ZSH
-paru -S zsh exa zsh-syntax-highlighting zsh-autosuggestions
+paru -S zsh eza zsh-syntax-highlighting zsh-autosuggestions
 chsh -s /bin/zsh
 
 # paru -S visual-studio-code-bin

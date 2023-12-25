@@ -1,8 +1,6 @@
 #!/bin/sh
 
-# Use this for better nvidia experience
-# paru -S hyprland-nvidia
-paru -S waybar-experimental-git sway-git wl-clipboard wlroots-nvidia
+paru -S hyprland waybar-experimental-git
 
 paru -S pipewire wireplumber xdg-desktop-portal-hyprland
 
@@ -10,10 +8,10 @@ paru -S pipewire wireplumber xdg-desktop-portal-hyprland
 paru -S xorg-xlsclients xorg-xwayland
 
 # The good stuff
-paru -S swappy grim slurp gammastep light swaybg wofi wl-clipboard cliphist
+paru -S satty-bin grim slurp gammastep light swaybg swayidle gtklock wl-clipboard wtype cliphist
 
 # Displays
-paru -S wdisplays kanshi wl-mirror
+paru -S wdisplays wlr-randr wl-mirror
 
 # Qt Wayland support
 paru -S qt5-wayland qt6-wayland

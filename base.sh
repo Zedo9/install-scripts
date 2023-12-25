@@ -4,7 +4,7 @@
 echo "LANG=en_US.UTF-8" >>/etc/locale.conf
 
 echo "KEYMAP=fr" >>/etc/vconsole.conf
-echo "FONT=ter-132n" >>/etc/vconsole.conf
+echo "FONT=ter-132b" >>/etc/vconsole.conf
 
 echo "arch-asus" >>/etc/hostname
 

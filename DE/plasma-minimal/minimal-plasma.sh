@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Core plasma desktop components:
-paru -S plasma-desktop sddm sddm-kcm
+paru -S xdg-desktop-portal-kde plasma-desktop sddm sddm-kcm
 
 # Wayland
 # Make sure to enable the [DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting "NVIDIA")
 paru -S plasma-wayland-session qt5-wayland qt6-wayland
 
 # Network
-paru -S plasma-nm kio-zeroconf kio-extras
+paru -S plasma-nm kio-zeroconf kio-extras kdeplasma-addons
 
 # KWallet
 paru -S kwalletmanager kwallet-pam
@@ -26,12 +26,12 @@ paru -S kde-gtk-config
 paru -S kdegraphics-thumbnailers ffmpegthumbs qt5-imageformats kimageformats taglib libappimage icoutils
 
 # PDF - Images
-paru -S gwenview okular
+paru -S gwenview okular kolourpaint
 
 # Multimedia
 paru -S plasma-pa elisa
 
-paru -S phonon-qt5-vlc # Make sure to remove things related to gstreamer
+# paru -S phonon-qt5-vlc # Make sure to remove things related to gstreamer
 # Legacy
 # paru -S phonon-qt5-gstreamer gst-libav gst-plugins-good gst-plugins-ugly gst-plugins-bad
 

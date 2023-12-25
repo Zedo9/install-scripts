@@ -22,7 +22,7 @@ paru -S gvfs \
 paru -S gpick mpv yt-dlp totem playerctl imv eog pinta amberol-git
 
 # Main
-paru -S alacritty kitty ranger feh qalculate-gtk gsimplecal dunst libnotify gnome-font-viewer
+paru -S alacritty wezterm ranger feh qalculate-gtk gsimplecal libnotify
 
 # Content creation
 # paru -S inkscape lmms obs-studio
@@ -52,8 +52,13 @@ paru -S networkmanager rsync network-manager-applet wpa_supplicant net-tools bin
 # Audio (Pipewire)
 paru -S pavucontrol pulsemixer alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack qjackctl
 
+# Notifications
+paru -S dunst
+
 # Virtualization/Administration/
 # paru -S gnome-boxes gnome-remote-desktop gnome-connections vino
+
+paru -S rofi-emoji rofi-lbonn-wayland
 
 # Systray stuff
 paru -S libappindicator-gtk2 libappindicator-gtk3
